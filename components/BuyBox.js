@@ -2,15 +2,18 @@
 import { useState } from 'react';
 import { CONSULTORAS, LEVE_JUNTO, RESPONSAVEL_IPHONE } from '@/lib/config';
 import { brl, linkWhatsApp } from '@/lib/format';
+import { canShowPrice } from '@/lib/product-policy';
 import { Whats } from './Icons';
 export default function BuyBox({produto}) {
-  const ehIphone = produto.categoria === 'iphone';
+  const ehIphone = produto.categoria==='iphone';
+  const visible = canShowPrice(produto);
   const [extras,setExtras] = useState([]);
   const nome = RESPONSAVEL_IPHONE;
   const numero = CONSULTORAS[nome];
   const itens = LEVE_JUNTO.filter(x=>extras.includes(x.id));
   const toggle = id => setExtras(e=>e.includes(id)?e.filter(x=>x!==id):[...e,id]);
   let msg = `Olá, ${nome}! Tenho interesse no ${produto.nome}, que vi no site.`;
+  if(!visible) msg += ' Pode me informar o valor e a disponibilidade?';
   if(itens.length) msg += ` Quero levar junto: ${itens.map(x=>x.nome).join(' e ')}.`;
   const avaliar = linkWhatsApp(numero,`Olá, ${nome}! Quero avaliar meu iPhone como entrada para o ${produto.nome}, que vi no site.`);
   return <div className="space-y-4">
@@ -22,9 +25,9 @@ export default function BuyBox({produto}) {
         <span className="flex-1 text-sm">{x.nome}<br/><span className="text-cinza">{brl(x.preco)}</span></span>
         <span className="text-xs text-cinza">Pedir junto</span>
       </label>)}</div>
-      {itens.length>0 && <p className="mt-3 text-sm">Total com extras: {brl(produto.preco+itens.reduce((s,x)=>s+x.preco,0))}</p>}
+      {visible && itens.length>0 && <p className="mt-3 text-sm">Total com extras: {brl(produto.preco+itens.reduce((s,x)=>s+x.preco,0))}</p>}
     </div>}
-    <a href={linkWhatsApp(numero,msg)} target="_blank" rel="noopener noreferrer" className="btn w-full py-4 text-base"><Whats className="h-5 w-5"/>Comprar no WhatsApp</a>
+    <a href={linkWhatsApp(numero,msg)} target="_blank" rel="noopener noreferrer" className="btn w-full py-4 text-base"><Whats className="h-5 w-5"/>{visible?'Comprar no WhatsApp':'Consultar valor no WhatsApp'}</a>
     {ehIphone && <a href={avaliar} target="_blank" rel="noopener noreferrer" className="btn-outline w-full">Avaliar meu iPhone (aceitamos a partir do XR)</a>}
   </div>;
 }
