@@ -24,8 +24,8 @@ export default function Footer() {
             Avalie-nos no Google
           </a>
         </div>
-        <div className="md:text-right">
-          <h3 className="text-xl">Fale com uma de nossas consultoras</h3>
+        <div id="contato" className="scroll-mt-36 md:text-right" aria-labelledby="contato-titulo">
+          <h3 id="contato-titulo" className="text-xl">Fale com uma de nossas consultoras</h3>
           <div className="mt-4 flex flex-col gap-3 sm:flex-row md:justify-end">
             {Object.entries(CONSULTORAS).map(([nome, num]) => (
               <a key={nome} className="btn" target="_blank" rel="noopener noreferrer"

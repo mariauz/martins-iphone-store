@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { brl } from '@/lib/format';
 import ProductPhoto from './ProductPhoto';
-export default function ProductCard({ p }) {
+export default function ProductCard({ p, limitedOffer = false }) {
   return (
     <Link href={`/produto/${p.slug}`} className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition hover:border-vinho">
       <div className="relative aspect-square bg-white/5">
@@ -10,9 +10,10 @@ export default function ProductCard({ p }) {
       </div>
       <div className="flex flex-1 flex-col gap-1 p-4">
         <h3 className="text-base sm:text-lg">{p.nome}</h3>
-        {p.promo && <span className="text-xs text-cinza line-through">{brl(p.precoOriginal)}</span>}
+        {p.promo && !limitedOffer && <span className="text-xs text-cinza line-through">{brl(p.precoOriginal)}</span>}
         <span className="text-lg font-medium">{brl(p.preco)}</span>
         <span className="text-xs text-cinza">à vista</span>
+        {limitedOffer && <span className="mt-2 text-xs font-medium text-white">Por tempo limitado</span>}
         {p.categoria === 'iphone' && p.fotos[0] === '/produtos/placeholder.svg' && <span className="text-[10px] text-cinza">Imagem ilustrativa. Consulte cores na descrição.</span>}
       </div>
     </Link>
