@@ -2,9 +2,9 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 const slides = [
-  {titulo:'iPhone à pronta entrega',texto:'Seu próximo iPhone está aqui. Conheça também nossos perfumes árabes.',link:'/iphone',kind:'phones',alt:'Linha de iPhones — imagem de divulgação da Apple'},
-  {titulo:'Seu iPhone vale mais',texto:'Aceitamos seu iPhone como entrada, a partir do XR. Consulte a avaliação.',link:'/iphone',kind:'trade',alt:'Pessoas comparando ou trocando smartphones — cena ilustrativa'},
-  {titulo:'Perfumes árabes',texto:'Fragrâncias marcantes para transformar a sua presença.',link:'/perfumes',kind:'perfumes',alt:'Composição de frascos de perfume — imagem ilustrativa'}
+  {titulo:'iPhone à pronta entrega',texto:'Seu próximo iPhone está aqui.',link:'/iphone',kind:'phones',src:'/api/banner-picture?kind=phones',alt:'Linha de iPhones — imagem de divulgação da Apple'},
+  {titulo:'Seu iPhone vale mais',texto:'Aceitamos seu iPhone como entrada, a partir do XR. Consulte a avaliação.',link:'/iphone',kind:'trade',src:'/banners/troca.svg',alt:'Duas mãos segurando iPhones — foto escolhida pela loja'},
+  {titulo:'Perfumes árabes',texto:'Fragrâncias marcantes para transformar a sua presença.',link:'/perfumes',kind:'perfumes',src:'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/832e14b5-c3a2-502e-933a-6dea27b338af/b88fa78f-0832-529f-9f96-3d4bb64f585d.jpg',alt:'Frascos Asad e Khamrah da Lattafa — imagem ilustrativa'}
 ];
 export default function Carousel() {
   const [i,setI] = useState(0);
@@ -14,10 +14,9 @@ export default function Carousel() {
     <div className="flex transition-transform duration-700 motion-reduce:transition-none" style={{transform:`translateX(-${i*100}%)`}}>
       {slides.map((s,k) => <div key={s.kind} aria-hidden={i!==k} className="relative min-w-full overflow-hidden bg-gradient-to-br from-vinho/60 to-black" style={{height:'clamp(420px,45vw,500px)'}}>
         <div className="absolute inset-y-0 right-0 w-full sm:w-3/5">
-          <img src={`/api/banner-picture?kind=${s.kind}`} alt={s.alt} loading={k===0?'eager':'lazy'} className="h-full w-full object-cover opacity-65 sm:opacity-90" />
-          {k===0 && <img src="/api/banner-picture?kind=perfumes" alt="Frascos de perfume ilustrativos" loading="lazy" className="absolute bottom-5 right-5 h-32 w-24 rounded-xl border border-white/20 object-cover shadow-2xl sm:h-44 sm:w-32" />}
+          <img src={s.src} alt={s.alt} loading={k===0?'eager':'lazy'} className={`h-full w-full ${s.kind==='phones'?'object-cover':'object-contain'} opacity-70 sm:opacity-100`} />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black via-black/65 to-transparent" />
         <div className="relative flex h-full max-w-xl flex-col items-start justify-center gap-5 px-6 pb-12 sm:px-14">
           <span className="text-xs uppercase tracking-[.25em] text-white/65">Martins iPhone Store • Taubaté</span>
           <h2 className="text-4xl leading-tight sm:text-5xl">{s.titulo}</h2>
