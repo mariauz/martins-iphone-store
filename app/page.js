@@ -7,7 +7,9 @@ import { CATEGORIAS } from '@/lib/config';
 import { getProducts } from '@/lib/products';
 export const revalidate = 300;
 export default async function Home() {
-  const promos = (await getProducts()).filter(p=>p.promo).slice(0,2);
+  const produtos = await getProducts();
+  const nomes = ['iPhone 14 128GB','iPhone 16 128GB'];
+  const promos = nomes.map(nome=>produtos.find(p=>p.categoria==='iphone' && p.nome===nome));
   return <>
     <Carousel/>
     <section className="mx-auto mt-12 max-w-6xl px-4">

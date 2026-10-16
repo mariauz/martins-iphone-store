@@ -3,6 +3,7 @@ import { Jost, Inter } from "next/font/google";
 import Marquee from "@/components/Marquee";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { LOJA, SITE_URL } from "@/lib/config";
 
 const titulo = Jost({ subsets: ["latin"], weight: ["200", "300", "400"], variable: "--font-titulo" });
@@ -23,6 +24,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main>{children}</main>
         <Footer />
+        <FloatingWhatsApp />
       </body>
     </html>
   );
