@@ -1,8 +1,19 @@
 categoria,subcategoria,nome,descrição,preço,preço promocional,foto,em promoção,disponível,WhatsApp responsável
-iphone,,iPhone 15 128GB,"iPhone 15 com chip A16 e câmera de 48 MP. Lacrado com 1 ano de garantia.","4599,00","4299,00",/produtos/placeholder.svg,sim,sim,
-iphone,,iPhone 15 256GB,"iPhone 15 de 256GB. Lacrado com garantia Apple.","5199,00",,/produtos/placeholder.svg,não,sim,
-iphone,,iPhone 14 128GB,"iPhone 14 com chip A15 Bionic. Lacrado.","3899,00","3599,00",/produtos/placeholder.svg,sim,sim,
-iphone,,iPhone 13 128GB,"iPhone 13 seminovo premium, bateria acima de 90%.","2899,00",,/produtos/placeholder.svg,não,sim,
+iphone,,iPhone 13 128GB,"Vermelho: bateria 86%. Verde: bateria 86%.",1850,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 14 128GB,"Preto: bateria 89%. Lilás: bateria 85%. Azul: bateria 85%.",2090,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 14 Pro 128GB,"Gold: bateria 87%. Branco: bateria 86%. Preto: bateria 87%. Roxo: bateria 85%.",2900,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 15 128GB,"Azul: bateria 88%.",2800,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,Não ativado,iPhone 15 128GB Não ativado,"Preto. Não ativado. Bateria 100%.",3000,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 15 Pro 128GB,"Azul: uma unidade com bateria 93% e outra com bateria 86%.",3550,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 15 Pro Max 256GB,"Azul: bateria 86%. Natural Titanium: bateria 85%. Preto: bateria 86%.",3990,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 16 128GB,"Preto: uma unidade com bateria 91% e outra com bateria 94%. Verde: bateria 94%.",3600,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 16 Pro 128GB,"Natural: bateria 91%. Deserto: bateria 92%.",4150,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 16 Pro Max 256GB,"Deserto: bateria 92%.",5090,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,,iPhone 17 Pro 256GB,"Laranja: bateria 100%. Azul: bateria 100%. Silver: bateria 100%.",6390,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,Lacrado,iPhone 16 128GB Lacrado,"Rosa. Lacrado. Pronta entrega. 1 ano de garantia Apple, conforme informado pela loja.",4450,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,Lacrado,iPhone 17E 256GB Lacrado,"Rosa ou Branco. Lacrado. Pronta entrega. 1 ano de garantia Apple, conforme informado pela loja.",4350,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,Lacrado,iPhone 17 Pro Max 256GB Lacrado,"Azul. Lacrado. Pronta entrega. 1 ano de garantia Apple, conforme informado pela loja.",7490,,/produtos/placeholder.svg,não,sim,Maria Eduarda
+iphone,Lacrado,iPhone 18 Pro Max 256GB Lacrado,"Preto e Roxo. Lacrado. Pronta entrega. 1 ano de garantia Apple, conforme informado pela loja.",10800,,/produtos/placeholder.svg,não,sim,Maria Eduarda
 android,,Xiaomi Redmi Note 13 256GB,"Tela AMOLED 120Hz, câmera de 108 MP.","1699,00","1499,00",/produtos/placeholder.svg,sim,sim,
 android,,Xiaomi Poco X6 256GB,"Desempenho para jogos e bateria de longa duração.","1999,00",,/produtos/placeholder.svg,não,sim,
 android,,Xiaomi Redmi 13C 128GB,"Custo-benefício para o dia a dia.","899,00",,/produtos/placeholder.svg,não,sim,
