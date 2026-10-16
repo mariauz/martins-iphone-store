@@ -19,6 +19,10 @@ export default function Footer() {
               </a>
             ))}
           </div>
+          <a href="https://share.google/UwXd2b4fZSvRWwGk1" target="_blank" rel="noopener noreferrer" className="btn-outline mt-5" aria-label="Avalie-nos no Google (abre em nova aba)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-5 w-5 text-amber-400"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2Z" /></svg>
+            Avalie-nos no Google
+          </a>
         </div>
         <div className="md:text-right">
           <h3 className="text-xl">Fale com uma de nossas consultoras</h3>
