@@ -4,7 +4,7 @@ import { canShowPrice } from '@/lib/product-policy';
 import { Whats } from './Icons';
 export default function BuyBox({produto}) {
   const iphone = produto.categoria==='iphone';
-  const visible = canShowPrice(produto);
+  const visible = canShowPrice(produto) && produto.preco > 0;
   const nome = RESPONSAVEL_IPHONE;
   const numero = CONSULTORAS[nome];
   let msg = `Olá, ${nome}! Tenho interesse no ${produto.nome}, que vi no site.`;
