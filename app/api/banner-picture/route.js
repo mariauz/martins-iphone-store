@@ -3,11 +3,13 @@ export const runtime = 'nodejs';
 const sources = {
   phones: 'https://www.apple.com/iphone/',
   trade: 'https://www.pexels.com/photo/close-up-of-hands-holding-smartphones-outdoors-28971395/',
-  perfumes: 'https://www.pexels.com/photo/three-perfume-bottles-264819/'
+  perfumes: 'https://www.pexels.com/photo/three-perfume-bottles-264819/',
+  'launch-pro': 'https://www.apple.com/br/iphone-18-pro/',
+  'launch-max': 'https://support.apple.com/pt-br/148591'
 };
 export async function GET(req) {
   const key = new URL(req.url).searchParams.get('kind');
-  if (!sources[key]) return new NextResponse(null,{status:404});
+  if (!Object.prototype.hasOwnProperty.call(sources,key)) return new NextResponse(null,{status:404});
   try {
     const res = await fetch(sources[key],{next:{revalidate:86400},signal:AbortSignal.timeout(10000)});
     if (!res.ok) throw new Error('Fonte indisponível');
@@ -21,6 +23,7 @@ export async function GET(req) {
       return NextResponse.redirect(u,{status:307,headers:{'Cache-Control':'public, max-age=3600'}});
     }
   } catch(e) { console.warn('Banner:',key,e.message); }
+  if(key.startsWith('launch-')) return NextResponse.redirect(new URL('/produtos/placeholder.svg',req.url));
   const svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect width="1200" height="600" fill="#21090c"/></svg>';
   return new NextResponse(svg,{headers:{'Content-Type':'image/svg+xml','Cache-Control':'public, max-age=60'}});
 }
