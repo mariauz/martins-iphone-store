@@ -1,0 +1,1 @@
+Coloque aqui as imagens dos banners: banner1.jpg, banner2.jpg, banner3.jpg (formato 16:9, ex.: 1600x900).

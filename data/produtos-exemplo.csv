@@ -1,0 +1,17 @@
+categoria,subcategoria,nome,descrição,preço,preço promocional,foto,em promoção,disponível,WhatsApp responsável
+iphone,,iPhone 15 128GB,"iPhone 15 com chip A16 e câmera de 48 MP. Lacrado com 1 ano de garantia.","4599,00","4299,00",/produtos/placeholder.svg,sim,sim,
+iphone,,iPhone 15 256GB,"iPhone 15 de 256GB. Lacrado com garantia Apple.","5199,00",,/produtos/placeholder.svg,não,sim,
+iphone,,iPhone 14 128GB,"iPhone 14 com chip A15 Bionic. Lacrado.","3899,00","3599,00",/produtos/placeholder.svg,sim,sim,
+iphone,,iPhone 13 128GB,"iPhone 13 seminovo premium, bateria acima de 90%.","2899,00",,/produtos/placeholder.svg,não,sim,
+android,,Xiaomi Redmi Note 13 256GB,"Tela AMOLED 120Hz, câmera de 108 MP.","1699,00","1499,00",/produtos/placeholder.svg,sim,sim,
+android,,Xiaomi Poco X6 256GB,"Desempenho para jogos e bateria de longa duração.","1999,00",,/produtos/placeholder.svg,não,sim,
+android,,Xiaomi Redmi 13C 128GB,"Custo-benefício para o dia a dia.","899,00",,/produtos/placeholder.svg,não,sim,
+android,,Xiaomi 14T 256GB,"Linha premium com câmera Leica.","3999,00","3699,00",/produtos/placeholder.svg,sim,sim,
+perfumes,Masculino,Lattafa Asad 100ml,"Perfume árabe masculino, amadeirado e especiado.","229,00","199,00",/produtos/placeholder.svg,sim,sim,
+perfumes,Masculino,Armaf Club de Nuit Intense 105ml,"Clássico árabe masculino, cítrico e marcante.","299,00",,/produtos/placeholder.svg,não,sim,
+perfumes,Feminino,Lattafa Yara 100ml,"Perfume árabe feminino, doce e cremoso.","219,00","189,00",/produtos/placeholder.svg,sim,sim,
+perfumes,Feminino,Lattafa Khamrah 100ml,"Notas de canela e baunilha.","289,00",,/produtos/placeholder.svg,não,sim,
+acessorios,,Kit capa + película iPhone 15,"Capa resistente e película de vidro 3D.","89,90",,/produtos/placeholder.svg,não,sim,
+acessorios,,Carregador USB-C 20W,"Carregamento rápido compatível com iPhone.","119,90","99,90",/produtos/placeholder.svg,sim,sim,Solange
+acessorios,,Fone Bluetooth,"Fone sem fio com estojo de carregamento.","149,90",,/produtos/placeholder.svg,não,sim,Solange
+acessorios,,Cabo USB-C Lightning 1m,"Cabo reforçado.","59,90",,/produtos/placeholder.svg,não,sim,

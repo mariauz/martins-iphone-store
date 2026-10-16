@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html { background: #000; color: #fff; scroll-behavior: smooth; }
+body { font-family: var(--font-texto), sans-serif; }
+h1, h2, h3 { font-family: var(--font-titulo), sans-serif; font-weight: 300; letter-spacing: .02em; }
+.btn { @apply inline-flex items-center justify-center gap-2 rounded-full bg-vinho px-6 py-3 text-sm font-medium text-white transition hover:bg-vinhoEscuro; }
+.btn-outline { @apply inline-flex items-center justify-center gap-2 rounded-full border border-vinho px-6 py-3 text-sm font-medium text-white transition hover:bg-vinho; }
