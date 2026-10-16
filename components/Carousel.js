@@ -1,12 +1,14 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import fotoTroca from '@/troca-iphone.webp';
+import fotoPerfumes from '@/perfumes-arabes.webp';
 import { CONSULTORAS, RESPONSAVEL_IPHONE } from '@/lib/config';
 import { linkWhatsApp } from '@/lib/format';
 const slides = [
   {titulo:'iPhone à pronta entrega',texto:'Seu próximo iPhone está aqui.',link:'/iphone',kind:'phones',src:'/api/banner-picture?kind=phones',alt:'Linha de iPhones — imagem de divulgação da Apple'},
-  {titulo:'Seu iPhone vale mais',texto:'Aceitamos seu iPhone como entrada, a partir do XR. Consulte a avaliação.',kind:'trade',src:'/banners/troca.svg',alt:'Duas mãos segurando iPhones — foto escolhida pela loja'},
-  {titulo:'Perfumes árabes',texto:'Fragrâncias femininas e masculinas para transformar a sua presença.',link:'/perfumes',kind:'perfumes',src:'https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/b7e37ea2-5f23-590f-a01e-b7182054463d/19fff8e5-c8d2-5bcc-b34c-43e2ef28b80a.jpg',alt:'Coleção de seis frascos de perfumes Lattafa — imagem ilustrativa'}
+  {titulo:'Seu iPhone vale mais',texto:'Aceitamos seu iPhone como entrada, a partir do XR. Consulte a avaliação.',kind:'trade',src:fotoTroca.src,alt:'Duas mãos segurando iPhones — foto escolhida pela loja'},
+  {titulo:'Perfumes árabes',texto:'Fragrâncias femininas e masculinas para transformar a sua presença.',link:'/perfumes',kind:'perfumes',src:fotoPerfumes.src,alt:'Composição de perfumes árabes — imagem escolhida pela loja'}
 ];
 export default function Carousel() {
   const [i,setI] = useState(0);
